@@ -1,4 +1,6 @@
-import Logo from "@/components/Logo/Logo";
+import IconButton from "@/components/IconButton";
+import Logo from "@/components/Logo";
+import { IconUserCircle } from "@tabler/icons-react";
 import Link from "next/link";
 
 const NavbarTop = () => {
@@ -13,7 +15,11 @@ const NavbarTop = () => {
           Experiências
         </Link>
       </div>
-      <button className="rounded-md border-2">Entrar</button>
+      <IconButton
+        icon={<IconUserCircle aria-label="Ícone de usuário" size={20} />}
+      >
+        Entrar
+      </IconButton>
     </div>
   );
 };
