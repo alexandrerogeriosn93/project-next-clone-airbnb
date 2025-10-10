@@ -1,6 +1,6 @@
+import { IconUserCircle } from "@/assets/icons";
 import IconButton from "@/components/IconButton";
 import Logo from "@/components/Logo";
-import { IconUserCircle } from "@tabler/icons-react";
 import Link from "next/link";
 
 const NavbarTop = () => {
