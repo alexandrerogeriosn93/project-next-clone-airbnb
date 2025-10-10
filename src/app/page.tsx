@@ -4,15 +4,16 @@ import SearchBar from "@/widgets/SearchBar";
 export default function Home() {
   return (
     <>
-      <div>
+      <header className="container mx-auto">
         <NavbarTop />
         <SearchBar />
-      </div>
+      </header>
 
-      <hr className="mt-5" />
+      <hr className="my-3" />
 
-      <div className="mt-10 border-2 border-green-600">Content</div>
-      <div className="border-2 border-purple-600">Footer</div>
+      <main className="container mx-auto">Content</main>
+
+      <footer className="container mx-auto">Footer</footer>
     </>
   );
 }
