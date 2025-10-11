@@ -22,9 +22,13 @@ const Accommodation = ({
   return (
     <figure className="relative">
       <div className="absolute flex w-full flex-row items-center justify-between p-2">
-        <span className="rounded-full bg-white px-4 py-1 font-semibold dark:text-black">
-          Preferido dos hóspedes
-        </span>
+        <div>
+          {hasBadge && (
+            <span className="rounded-full bg-white px-4 py-1 font-semibold dark:text-black">
+              Preferido dos hóspedes
+            </span>
+          )}
+        </div>
         <IconHeartFilled
           className="stroke-white opacity-80 dark:stroke-black"
           aria-label="Favoritos"
