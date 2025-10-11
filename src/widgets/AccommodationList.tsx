@@ -1,3 +1,4 @@
+import Accommodation from "@/components/Accommodation";
 import Image from "next/image";
 
 const accommodations = [
@@ -2970,23 +2971,32 @@ const accommodations = [
   },
 ];
 
-const Accommodation = () => {
+const AccommodationList = () => {
   return (
     <section className="grid grid-cols-1 gap-4 py-6 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       {accommodations &&
         accommodations.map((accommodation, id) => (
           <div key={id}>
-            <Image
-              className="aspect-square w-full rounded-xl object-cover"
-              src={accommodation.photos[0].source}
-              alt={accommodation.photos[0].description}
-              width={300}
-              height={300}
-            />
+            <Accommodation
+              location={accommodation.location.description}
+              host={accommodation.host}
+              date={accommodation.date}
+              price={accommodation.price}
+              rating={accommodation.rating}
+              hasBadge={accommodation.hasBadge}
+            >
+              <Image
+                className="aspect-square w-full rounded-xl object-cover"
+                src={accommodation.photos[0].source}
+                alt={accommodation.photos[0].description}
+                width={300}
+                height={300}
+              />
+            </Accommodation>
           </div>
         ))}
     </section>
   );
 };
 
-export default Accommodation;
+export default AccommodationList;
