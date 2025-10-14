@@ -12,7 +12,7 @@ interface GalleryProps {
 
 const Gallery = ({ photos }: GalleryProps) => {
   return (
-    <div className="grid grid-cols-6 gap-2">
+    <div className="grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-6">
       {photos.length > 0 &&
         photos.slice(0, 9).map((photo, id) => {
           const firstPhoto = id === 0 ? "col-span-2 row-span-2" : "";
