@@ -10,12 +10,19 @@ import {
   IconToolsKitchen2,
   IconWifi,
 } from "@/assets/icons";
+import { AccommodationType } from "@/types/AirbnbData";
 
-const AccommodationDetails = () => {
+interface AccommodationDetailsProps {
+  accommodation: AccommodationType;
+}
+
+const AccommodationDetails = ({ accommodation }: AccommodationDetailsProps) => {
+  const accommodationById = accommodation;
+
   return (
     <div className="w-full py-4">
       <h2 className="text-xl font-semibold">
-        Espaço inteiro: casa de campo em Minas Gearis
+        {accommodationById.location.description}
       </h2>
       <ul className="flex flex-row gap-2">
         <li>10 hóspedes</li>
