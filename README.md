@@ -1,36 +1,105 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Airbnb Clone Project
 
-## Getting Started
+This project is a functional clone of the Airbnb platform, developed for student and educational purposes. It demonstrates a modern web application architecture using the latest technologies.
 
-First, run the development server:
+> [!IMPORTANT]
+> This project is non-profit and strictly for educational and student purposes.
+
+## Technologies Used
+
+The project leverages a modern tech stack to ensure performance, type safety, and a premium user experience:
+
+- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
+- **Library**: [React 19](https://react.dev/)
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **Icons**: [Tabler Icons](https://tabler.io/icons)
+- **Slider**: [Swiper](https://swiperjs.com/)
+- **Formatting**: [Prettier](https://prettier.io/) with Tailwind CSS and Import Sort plugins
+
+## Project Structure
+
+Below is the directory structure (excluding `.github`, `node_modules`, and build artifacts):
+
+```text
+.
+├── src
+│   ├── app
+│   │   ├── [id]
+│   │   │   └── page.tsx           # Accommodation details page
+│   │   ├── favicon.ico
+│   │   ├── globals.css           # Global styles
+│   │   ├── layout.tsx            # Root layout
+│   │   └── page.tsx              # Home / listing page
+│   ├── assets
+│   │   └── icons.ts              # Custom SVG icon components
+│   ├── components
+│   │   ├── Accommodation
+│   │   ├── IconButton
+│   │   └── Logo
+│   ├── types
+│   │   └── AirbnbData.ts         # TypeScript interfaces
+│   ├── utils
+│   │   └── api.ts                # API/Fetch utilities
+│   └── widgets
+│       ├── AccommodationDetails.tsx
+│       ├── AccommodationList.tsx
+│       ├── AccommodationTestimonials.tsx
+│       ├── Footer.tsx
+│       ├── Gallery.tsx
+│       ├── NavbarFilter.tsx
+│       ├── NavbarTop.tsx
+│       └── SearchBar.tsx
+├── public                        # Static assets
+├── next.config.ts                # Next.js configuration
+├── tailwind.config.ts            # Tailwind configuration
+├── tsconfig.json                 # TypeScript configuration
+└── package.json                  # Dependencies and scripts
+```
+
+## How to Run
+
+Follow these steps to set up and run the project locally:
+
+### Prerequisites
+
+- Node.js (Latest LTS version recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone <repository-url>
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+### Development Server
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Build and Start
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+To build and run the production version:
 
-## Learn More
+```bash
+npm run build
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
+## Previews
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![Preview 01](.github/preview-01.png)
+![Preview 02](.github/preview-02.png)
